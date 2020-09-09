@@ -1,0 +1,15 @@
+syntax ="proto3";
+
+message StudentRequest {
+    string studentNumber = 1;
+}    
+
+message StudentResponse {
+    string firstName = 1;
+    string lastName = 2;
+    string major = 3;
+}
+
+service StudentService {
+    rpc GetStudentInfo (StudentRequest) returns (StudentResponse);
+}
